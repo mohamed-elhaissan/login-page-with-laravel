@@ -1,9 +1,14 @@
 @extends('layout')
 @section('title', 'login')
 @section('content')
-<div class="loading w-full h-full  absolute left-0 top-0">
-    <div class="bg-black"></div>
+<div class="loading w-full h-full  absolute left-0 top-0 flex">
+    <div class="bg-black w-[20%] h-[100vh] mx-1"></div>
+    <div class="bg-black w-[20%] h-[100vh] mx-1"></div>
+    <div class="bg-black w-[20%] h-[100vh] mx-1"></div>
+    <div class="bg-black w-[20%] h-[100vh] mx-1"></div>
+    <div class="bg-black w-[20%] h-[100vh] mx-1"></div>
 </div>
+
     <div class="bg-white p-4 w-[30%]">
         <h1 class="font-semibold text-3xl text-center">login</h1>
         <p class="opacity-50 text-sm my-2 text-center">Enter your credentials to access your account</p>
