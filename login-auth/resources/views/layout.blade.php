@@ -32,6 +32,7 @@
 <body>
 
     @yield('content')
+    <script src="{{asset('js/Script.js')}}"></script>
 
 </body>
 
