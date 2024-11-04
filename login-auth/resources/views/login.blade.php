@@ -1,7 +1,9 @@
 @extends('layout')
 @section('title', 'login')
 @section('content')
-    <div class="loading w-full h-full bg-[#F3F4F6] z-10 absolute left-0 top-0 flex">
+    <div class="loading w-full h-full bg-[#F3F4F6] z-10 absolute left-0 top-0 flex justify-center items-center">
+        <div></div>
+        <div></div>
         <div></div>
     </div>
 

@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+        @vite('resources/sass/app.scss')
     <style>
         body {
             background: #F3F4F6;
@@ -23,6 +24,18 @@
             align-items: center;
             height: 100vh;
             font-family: 'inter',sans-serif;
+        }
+        .loading div {
+            background: #000;
+            animation: loadingAnimation 1s ease-in-out;
+        }
+        @keyframes loadingAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: 360%;
+            }
         }
     </style>
     {{-- gsap cdn  --}}

@@ -1,0 +1,29 @@
+.loading {
+    div {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        margin: 0px 4px;
+        border-radius: 50%;
+    }
+    div:first-of-type {
+        animation: loading 1s ease infinite;
+        animation-delay: 1s;
+    }
+    div:nth-of-type(2) {
+        animation: loading 1s ease infinite;
+        animation-delay: 1.2s;
+    }
+    div:last-of-type {
+        animation: loading 1s ease infinite;
+        animation-delay: 1.4s;
+    }
+    @keyframes loading {
+        0%,100% {
+            transform: scale(0.8);
+        }
+        50% {
+            transform: scale(1.9);
+        }
+    }
+}
