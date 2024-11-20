@@ -22,7 +22,18 @@
 </head>
 
 <body>
+    <div class="loading">
+        <div class="w-full h-full absolute left-0 top-0 bg-[#A1A1AA] z-20"></div>
+        <div class="w-full h-full absolute left-0 top-0 bg-black z-20"></div>
+    </div>
     @yield('content')
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
