@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
@@ -18,7 +19,17 @@ class LoginAuthController extends Controller
     {
         return view('register');
     }
-    function LoginAuthCheck() {}
+    function LoginAuthCheck(Request $loginRequist) {
+        $loginRequist->validate([
+            'email'=>'required',
+            'password' => 'required'
+        ]);
+        $settingRequest = $loginRequist->only('email','password');
+        if(Auth::attempt($settingRequest)){
+            return redirect(route('dash'));
+        }
+        return view('login')->with('loginErr','incorrect Password');
+    }
     function registerAuthCheck(Request $request)
     {
         // check all the input
@@ -27,11 +38,15 @@ class LoginAuthController extends Controller
             "userEmail" => 'required|email',
             "userPassword" => 'required'
         ]);
-
+        // add the value from the input to the database user table
         $userTable = new User();
         $userTable->name = $request->userFullName;
         $userTable->email = $request->userEmail;
         $userTable->password= hash::make($request->userPassword);
+
+
+
+        // handle error
         try {
             if($userTable->save()){
                 return view('login')->with('isDone','User Created Successfully');
@@ -40,7 +55,7 @@ class LoginAuthController extends Controller
             if($error->getCode() == 23000){
                 return view('register')->with('emailerror','Pleae try Another Email');
             }
-            return view('register')->with('err','Pleae try again Later');
+            return view('register')->with('err','Failed to Create The User');
             
         };
     }
