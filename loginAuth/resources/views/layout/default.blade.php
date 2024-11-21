@@ -32,8 +32,8 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script> -->
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>

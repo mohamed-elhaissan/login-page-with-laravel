@@ -5,10 +5,10 @@
 <div class="bg-white w-1/3 shadow-md p-4 rounded-lg">
     <h1 class="text-center text-3xl">Login</h1>
     <p class="text-center opacity-50 mt-2 mb-5">To get Started</p>
-    <form class="flex flex-col">
+    <form class="flex flex-col" method="POST" action="{{route('login.post')}}">
         <div class="flex flex-col">
             <label for="Email">Email</label>
-            <input class="border py-2 pl-2 outline-[#A1A1AA] mb-2" type="email">
+            <input class="border py-2 pl-2 outline-[#A1A1AA] mb-2" type="email" required>
         </div>
         <div class="flex flex-col">
             <label for="password">password</label>
