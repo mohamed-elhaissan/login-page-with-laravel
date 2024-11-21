@@ -8,7 +8,7 @@
     <form class="flex flex-col" method="POST" action="{{route('login.post')}}">
         <div class="flex flex-col">
             <label for="Email">Email</label>
-            <input class="border py-2 pl-2 outline-[#A1A1AA] mb-2" type="email" required>
+            <input class="border py-2 pl-2 outline-[#A1A1AA] mb-2" type="email" placeholder="m@exemple.com" required>
         </div>
         <div class="flex flex-col">
             <label for="password">password</label>
@@ -16,7 +16,7 @@
         </div>
         <a href="#" class="text-[#A1A1AA] mt-3">Forget Password ?</a>
         <button class="bg-black text-white mt-3 py-2 h-11 rounded-md">Sign In</button>
-        <a href="noweere" class="w-full border-[#A1A1AA] text-center border mt-3 py-2 h-11 rounded-md">Sign Up</a>
+        <a href="/register" class="w-full border-[#A1A1AA] text-center border mt-3 py-2 h-11 rounded-md">Sign Up</a>
     </form>
 </div>
 @endsection
