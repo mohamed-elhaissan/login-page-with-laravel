@@ -26,7 +26,7 @@ class LoginAuthController extends Controller
         ]);
         $settingRequest = $loginRequist->only('email','password');
         if(Auth::attempt($settingRequest)){
-            return redirect(route('authauraized'));
+            return redirect(route('home'));
         }
         return view('login')->with('loginErr','incorrect Password');
     }

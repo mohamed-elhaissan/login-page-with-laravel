@@ -1,5 +1,5 @@
-@extends('layout.default');
-@section('title','you are in');
+@extends('layout.default')
+@section('title','you are in')
 
 
 @section('content')
