@@ -4,7 +4,7 @@ use App\Http\Controllers\LoginAuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('layout.default');
+    return view('welcome');
 });
 Route::get('/login',[LoginAuthController::class,'login']);
 Route::get('/register',[LoginAuthController::class,'register']);
